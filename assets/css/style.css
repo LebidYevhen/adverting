@@ -121,6 +121,12 @@
     letter-spacing: -0.3px;
 
     cursor: pointer;
+
+    transition: background-color .3s linear;
+}
+
+.header__button:hover {
+    background-color: #ffc000;
 }
 
 .slider {
@@ -317,6 +323,12 @@
 .team__card {
     width: 370px;
     max-width: 100%;
+
+    transition: all .2s linear;
+}
+
+.team__card:hover {
+    transform: scale(1.1);
 }
 
 .team__card-top {
@@ -465,6 +477,12 @@
     letter-spacing: -0.9px;
 
     cursor: pointer;
+
+    transition: background-color .3s linear;
+}
+
+.sign-up__submit:hover {
+    background-color: #ffc0007a;
 }
 
 .footer {
