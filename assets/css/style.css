@@ -40,13 +40,12 @@
 
 
 .header {
+    padding: 22px 0 23px;
     background-color: #000000;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
 .header__wrapper {
-    height: 81px;
-
     display: flex;
     align-items: center;
 }
@@ -64,6 +63,11 @@
     text-decoration: none;
 }
 
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     margin-right: 10px;
 }
@@ -72,6 +76,7 @@
     color: #ffffff;
     font-size: 30px;
     font-weight: 700;
+    line-height: 1;
     letter-spacing: -0.51px;
 }
 
@@ -523,4 +528,239 @@
     align-items: center;
 }
 
+.menu__btn {
+    display: none;
+}
 
+/* Media */
+@media (max-width: 1200px) {
+    .header__wrapper {
+        justify-content: space-between;
+    }
+
+    .header__left,
+    .header__nav {
+        margin-right: 0;
+    }
+
+    .slider,
+    .about-us,
+    .quality,
+    .services,
+    .team,
+    .sign-up {
+        padding: 100px 0;
+    }
+
+    .slider__item {
+        margin: 0 auto;
+    }
+
+    .quality__items {
+        flex-wrap: wrap;
+    }
+
+    .quality__item {
+        margin-bottom: 50px;
+
+        width: 50%;
+        max-width: 100%;
+    }
+
+    .item__description {
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .services__items .services__item {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .services__items .services__item:last-child {
+        margin-bottom: 0;
+    }
+
+    .services__description {
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .team__cards {
+        flex-direction: column;
+    }
+
+    .team__card {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header__wrapper {
+        flex-direction: column;
+    }
+
+    .header__left,
+    .header__right,
+    .header__button {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .services__items .services__item {
+        width: 100%;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+
+    .services__description {
+        width: auto;
+    }
+}
+
+@media (max-width: 805px) {
+    .sign-up__title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__wrapper {
+        flex-direction: unset;
+        justify-content: space-between;
+    }
+
+    .header__left,
+    .header__right,
+    .header__button {
+        margin-bottom: 0;
+    }
+
+    .header__right {
+        flex-direction: row-reverse;
+    }
+
+    .menu__btn {
+        display: block;
+        width: 35px;
+        height: 24px;
+        border: none;
+        border-top: 2px solid #fefefe;
+        border-bottom: 2px solid #fefefe;
+        background-color: transparent;
+        position: relative;
+    }
+
+    .menu__btn:before {
+        content: '';
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: #fefefe;
+        left: 0;
+        top: 9px;
+    }
+
+    .header__menu.header__menu--active {
+        transform: translateY(0);
+    }
+
+    .header__left {
+        margin-right: 0;
+    }
+
+    .header__right {
+        justify-content: space-between;
+        order: 1;
+    }
+
+    .header__nav {
+        width: auto;
+        margin-right: 0;
+    }
+
+    .header__menu {
+        display: block;
+        position: absolute;
+        top: 81px;
+        left: 0;
+        background-color: #000;
+        right: 0;
+        text-align: center;
+        padding: 20px 0;
+        transform: translateY(-500px);
+        transition: all .5s;
+    }
+
+    .item__link {
+        padding: 20px 0;
+        display: block;
+    }
+
+    .slider__subtitle,
+    .title,
+    .sign-up__title {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .slider__title img {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    .slider__text {
+        font-size: 18px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .quality__items {
+        flex-direction: column;
+    }
+
+    .quality__item {
+        width: 100%;
+    }
+
+    .about-us__video-block {
+        height: 250px;
+    }
+
+    .sign-up__email {
+        width: 75%;
+    }
+
+    .sign-up__submit {
+        width: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header__left {
+        width: auto;
+    }
+
+    .header__title {
+        display: none;
+    }
+
+    .slider,
+    .about-us,
+    .quality,
+    .services,
+    .team,
+    .sign-up {
+        padding: 50px 0;
+    }
+
+    .footer__wrapper {
+        flex-direction: column;
+    }
+
+    .footer__copyright {
+        margin-bottom: 20px;
+    }
+}
